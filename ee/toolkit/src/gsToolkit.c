@@ -534,12 +534,6 @@ int gsKit_texture_bmp(GSGLOBAL *gsGlobal, GSTEXTURE *Texture, char *Path)
         p[(y * Texture->Width + x) * 3 + 0] = SourceRow[x * 3 + 2];
     }
 		}
-			for (x = 0; x < Texture->Width; x++) {
-				p[(y * Texture->Width + x) * 3 + 2] = image[(cy * Texture->Width + x) * 3 + 0];
-				p[(y * Texture->Width + x) * 3 + 1] = image[(cy * Texture->Width + x) * 3 + 1];
-				p[(y * Texture->Width + x) * 3 + 0] = image[(cy * Texture->Width + x) * 3 + 2];
-			}
-		}
 		free(image);
 		image = NULL;
 	}
